@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+// Controllers
+use App\Http\Controllers\MatchesController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +27,9 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
+
+    // Tickets
+    Route::get('/matches/tickets/demo', [MatchesController::class, 'print_demo']);
 });
 
 // Clear cache
