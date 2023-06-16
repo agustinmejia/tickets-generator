@@ -29,7 +29,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
     // Tickets
-    Route::get('/matches/tickets/demo', [MatchesController::class, 'print_demo']);
+    Route::get('/matches/{match}/tickets/', [MatchesController::class, 'tickets_index'])->name('matches.tickets.index');
+    Route::get('/matches/{match}/tickets/print/{id?}', [MatchesController::class, 'tickets_print'])->name('matches.tickets.print');
 });
 
 // Clear cache

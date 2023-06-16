@@ -753,7 +753,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 3,
+                'order' => 5,
             ),
             46 => 
             array (
@@ -769,7 +769,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 5,
+                'order' => 7,
             ),
             47 => 
             array (
@@ -779,13 +779,13 @@ class DataRowsTableSeeder extends Seeder
                 'type' => 'select_dropdown',
                 'display_name' => 'Ubicación',
                 'required' => 0,
-                'browse' => 1,
+                'browse' => 0,
                 'read' => 1,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"options":{"Estadio Gran Mamor\\u00e9":"Estadio Gran Mamor\\u00e9"},"validation":{"rule":"required"},"display":{"width":6}}',
-                'order' => 7,
+                'order' => 9,
             ),
             48 => 
             array (
@@ -795,13 +795,13 @@ class DataRowsTableSeeder extends Seeder
                 'type' => 'number',
                 'display_name' => 'Cantidad de entradas',
                 'required' => 0,
-                'browse' => 1,
+                'browse' => 0,
                 'read' => 1,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"step":1,"min":100,"max":20000,"default":5000,"validation":{"rule":"required|max:191"},"display":{"width":6}}',
-                'order' => 8,
+                'order' => 10,
             ),
             49 => 
             array (
@@ -817,7 +817,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"validation":{"rule":"required|max:191"},"display":{"width":6}}',
-                'order' => 9,
+                'order' => 11,
             ),
             50 => 
             array (
@@ -833,7 +833,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"options":{"Pendiente":"Pendiente","Impresi\\u00f3n":"Impresi\\u00f3n","Finalizado":"Finalizado"},"validation":{"rule":"required"},"display":{"width":6}}',
-                'order' => 10,
+                'order' => 12,
             ),
             51 => 
             array (
@@ -849,7 +849,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 11,
+                'order' => 13,
             ),
             52 => 
             array (
@@ -865,7 +865,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 12,
+                'order' => 14,
             ),
             53 => 
             array (
@@ -881,7 +881,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 13,
+                'order' => 15,
             ),
             54 => 
             array (
@@ -897,7 +897,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Models\\\\Team","table":"teams","type":"belongsTo","column":"local_id","key":"id","label":"name","pivot_table":"customers","pivot":"0","taggable":"0"}',
-                'order' => 4,
+                'order' => 6,
             ),
             55 => 
             array (
@@ -913,7 +913,39 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Models\\\\Team","table":"teams","type":"belongsTo","column":"visitor_id","key":"id","label":"name","pivot_table":"customers","pivot":"0","taggable":"0"}',
-                'order' => 6,
+                'order' => 8,
+            ),
+            56 => 
+            array (
+                'id' => 57,
+                'data_type_id' => 7,
+                'field' => 'championship',
+                'type' => 'select_dropdown',
+                'display_name' => 'Campeonato',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"options":{"Primera Divisi\\u00f3n Boliviana":"Primera Divisi\\u00f3n Boliviana","Copa Tigo":"Copa Tigo"},"display":{"width":6}}',
+                'order' => 3,
+            ),
+            57 => 
+            array (
+                'id' => 58,
+                'data_type_id' => 7,
+                'field' => 'journey',
+                'type' => 'text',
+                'display_name' => 'Jornada',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required|max:191"},"display":{"width":6},"placeholder":"Fecha 1"}',
+                'order' => 4,
             ),
         ));
         

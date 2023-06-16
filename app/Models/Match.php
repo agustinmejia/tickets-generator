@@ -10,4 +10,12 @@ class Match extends Model
 {
     use HasFactory, SoftDeletes;
     protected $dates = ['deleted_at'];
+
+    public function local() {
+        return $this->belongsTo(Team::class, 'local_id');
+    }
+
+    public function visitor() {
+        return $this->belongsTo(Team::class, 'visitor_id');
+    }
 }
