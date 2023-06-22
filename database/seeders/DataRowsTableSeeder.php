@@ -887,7 +887,7 @@ class DataRowsTableSeeder extends Seeder
             array (
                 'id' => 55,
                 'data_type_id' => 7,
-                'field' => 'match_belongsto_team_relationship',
+                'field' => 'game_belongsto_team_relationship',
                 'type' => 'relationship',
                 'display_name' => 'Local',
                 'required' => 1,
@@ -903,7 +903,7 @@ class DataRowsTableSeeder extends Seeder
             array (
                 'id' => 56,
                 'data_type_id' => 7,
-                'field' => 'match_belongsto_team_relationship_1',
+                'field' => 'game_belongsto_team_relationship_1',
                 'type' => 'relationship',
                 'display_name' => 'Visitante',
                 'required' => 1,

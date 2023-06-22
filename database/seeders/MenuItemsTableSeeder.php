@@ -272,7 +272,7 @@ class MenuItemsTableSeeder extends Seeder
                 'order' => 4,
                 'created_at' => '2023-06-07 08:55:29',
                 'updated_at' => '2023-06-07 08:55:59',
-                'route' => 'voyager.matches.index',
+                'route' => 'voyager.games.index',
                 'parameters' => NULL,
             ),
         ));

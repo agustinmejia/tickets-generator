@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Entradas | {{ $match->local->name }} vs {{ $match->visitor->name }}</title>
+        <title>Entradas | {{ $game->local->name }} vs {{ $game->visitor->name }}</title>
     </head>
     <body>
         <div>
@@ -16,35 +16,34 @@
                 <tr>
                     <td colspan="3">
                         <h3 style="margin-top: 0px !important">
-                            {{ $match->championship }} <br>
-                            <small>{{ $match->journey }}</small>
+                            {{ $game->championship }} <br>
+                            <small>{{ $game->journey }}</small>
                         </h3>
                     </td>
                 </tr>
                 <tr>
                     <td width="45%" style="vertical-align: top;">
-                        <img src="{{ $match->local->logo ? asset('storage/'.str_replace('.', '-cropped.', $match->local->logo)) : asset('images/team-demo.png') }}" width="60px" height="60px" alt=""> <br>
-                        <small>{{ $match->local->name }}</small>
+                        <img src="{{ $game->local->logo ? asset('storage/'.str_replace('.', '-cropped.', $game->local->logo)) : asset('images/team-demo.png') }}" width="60px" height="60px" alt=""> <br>
+                        <small>{{ $game->local->name }}</small>
                     </td>
                     <td width="10%"><b>VS</b></td>
                     <td width="45%" style="vertical-align: top;">
-                        <img src="{{ $match->visitor->logo ? asset('storage/'.str_replace('.', '-cropped.', $match->visitor->logo)) : asset('images/team-demo.png') }}" width="60px" height="60px" alt=""> <br>
-                        <small>{{ $match->visitor->name }}</small>
+                        <img src="{{ $game->visitor->logo ? asset('storage/'.str_replace('.', '-cropped.', $game->visitor->logo)) : asset('images/team-demo.png') }}" width="60px" height="60px" alt=""> <br>
+                        <small>{{ $game->visitor->name }}</small>
                     </td>
                 </tr>
                 <tr>
                     <td colspan="3">
                         <h4>
-                            {{ $match->location }} <br>
-                            <small>{{ $days[date('N', strtotime($match->datetime))] }}, {{ date('d', strtotime($match->datetime)) }} de {{ $months[intval(date('m', strtotime($match->datetime)))] }} de {{ date('Y', strtotime($match->datetime)) }}</small>
+                            {{ $game->location }} <br>
+                            <small>{{ $days[date('N', strtotime($game->datetime))] }}, {{ date('d', strtotime($game->datetime)) }} de {{ $months[intval(date('m', strtotime($game->datetime)))] }} de {{ date('Y', strtotime($game->datetime)) }}</small>
                         </h4>
                     </td>
                 </tr>
             </table>
-            <br>
-            <table class="table-details" width="100%" style="padding: 0px 10px">
+            <table class="table-details" width="100%">
                 <tr>
-                    <td>Entrada Nro</td>
+                    <td>Nro</td>
                     <td style="text-align: right"><b>00001</b></td>
                     <td rowspan="7" style="width: 90px; vertical-align: bottom;">
                         <div id="qrcode" style="margin-left: 10px;"></div>
@@ -52,11 +51,11 @@
                 </tr>
                 <tr>
                     <td>Fecha</td>
-                    <td style="text-align: right"><b>{{ date('d', strtotime($match->datetime)) }}/{{ $months[intval(date('m', strtotime($match->datetime)))] }}/{{ date('Y', strtotime($match->datetime)) }}</b></td>
+                    <td style="text-align: right"><b>{{ date('d', strtotime($game->datetime)) }}/{{ $months[intval(date('m', strtotime($game->datetime)))] }}/{{ date('Y', strtotime($game->datetime)) }}</b></td>
                 </tr>
                 <tr>
                     <td>Hora</td>
-                    <td style="text-align: right"><b>{{ date('H:i', strtotime($match->datetime)) }}</b></td>
+                    <td style="text-align: right"><b>{{ date('H:i', strtotime($game->datetime)) }}</b></td>
                 </tr>
                 <tr>
                     <td>Sector</td>
@@ -80,12 +79,12 @@
             </table>
             <br><br>
         </div>
-        <div class="saltopagina"></div>
+        {{-- <div class="saltopagina"></div> --}}
     </body>
     <style>
         body {
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px 20px;
             /* width: 8cm; */
             /* border: 1px solid black */
         }
@@ -99,10 +98,10 @@
             margin: 5px 0px
         }
         h3 > small {
-            font-size: 14px
+            font-size: 13px
         }
         h4 > small {
-            font-size: 12px
+            font-size: 11px
         }
         .saltopagina{
             page-break-before: always;
@@ -112,8 +111,8 @@
     <script>
         var qrcode = new QRCode(document.getElementById("qrcode"), {
             text: "2y10m0ZVKxtWEsF4hw928IPBOWs86g",
-            width: 80,
-            height: 80,
+            width: 100,
+            height: 100,
             colorDark : "#000000",
             colorLight : "#ffffff",
             correctLevel : QRCode.CorrectLevel.H

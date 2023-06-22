@@ -130,12 +130,12 @@ class DataTypesTableSeeder extends Seeder
             6 => 
             array (
                 'id' => 7,
-                'name' => 'matches',
-                'slug' => 'matches',
+                'name' => 'games',
+                'slug' => 'games',
                 'display_name_singular' => 'Encuentro',
                 'display_name_plural' => 'Encuentros',
                 'icon' => 'voyager-calendar',
-                'model_name' => 'App\\Models\\Match',
+                'model_name' => 'App\\Models\\Game',
                 'policy_name' => NULL,
                 'controller' => NULL,
                 'description' => NULL,

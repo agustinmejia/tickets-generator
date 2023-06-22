@@ -4,7 +4,7 @@ namespace App\Actions;
 
 use TCG\Voyager\Actions\AbstractAction;
 
-class MatchesMoreAction extends AbstractAction
+class GamesMoreAction extends AbstractAction
 {
     public function getTitle()
     {
@@ -30,11 +30,11 @@ class MatchesMoreAction extends AbstractAction
 
     public function getDefaultRoute()
     {
-        return route('matches.tickets.index', $this->data->id);
+        return route('games.tickets.index', $this->data->id);
     }
 
     public function shouldActionDisplayOnDataType()
     {
-        return $this->dataType->slug == 'matches';
+        return $this->dataType->slug == 'games';
     }
 }

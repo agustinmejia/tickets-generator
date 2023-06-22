@@ -35,6 +35,6 @@ class PermissionsTableSeeder extends Seeder
 
         Permission::generateFor('teams');
         Permission::generateFor('customers');
-        Permission::generateFor('matches');
+        Permission::generateFor('games');
     }
 }

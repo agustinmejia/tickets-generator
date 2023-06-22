@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 // Controllers
-use App\Http\Controllers\MatchesController;
+use App\Http\Controllers\GamesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +29,8 @@ Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 
     // Tickets
-    Route::get('/matches/{match}/tickets/', [MatchesController::class, 'tickets_index'])->name('matches.tickets.index');
-    Route::get('/matches/{match}/tickets/print/{id?}', [MatchesController::class, 'tickets_print'])->name('matches.tickets.print');
+    Route::get('/games/{game}/tickets/', [GamesController::class, 'tickets_index'])->name('games.tickets.index');
+    Route::get('/games/{game}/tickets/print/{id?}', [GamesController::class, 'tickets_print'])->name('games.tickets.print');
 });
 
 // Clear cache
