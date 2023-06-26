@@ -21,7 +21,16 @@ Route::get('login', function () {
 })->name('login');
 
 Route::get('/', function () {
-    return redirect('admin');
+    return view('welcome');
+});
+
+Route::get('/scan', function () {
+    return view('scan');
+});
+
+Route::get('/scan/{code}', function ($code) {
+    $ticket = App\Models\Ticket::where('code', $code)->first();
+    return response()->json($ticket);
 });
 
 
@@ -31,6 +40,7 @@ Route::group(['prefix' => 'admin'], function () {
     // Tickets
     Route::get('/games/{game}/tickets/', [GamesController::class, 'tickets_index'])->name('games.tickets.index');
     Route::get('/games/{game}/tickets/print/{id?}', [GamesController::class, 'tickets_print'])->name('games.tickets.print');
+    Route::post('/games/{game}/tickets/generate', [GamesController::class, 'tickets_generate'])->name('games.tickets.generate');
 });
 
 // Clear cache

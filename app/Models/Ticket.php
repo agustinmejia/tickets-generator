@@ -10,4 +10,7 @@ class Ticket extends Model
 {
     use HasFactory, SoftDeletes;
     protected $dates = ['deleted_at'];
+    protected $fillable = [
+        'user_id', 'ticket_print_id', 'number', 'code', 'status'
+    ];
 }

@@ -145,6 +145,24 @@ class DataTypesTableSeeder extends Seeder
                 'created_at' => '2023-06-07 08:55:28',
                 'updated_at' => '2023-06-16 11:52:18',
             ),
+            7 => 
+            array (
+                'id' => 8,
+                'name' => 'branch_offices',
+                'slug' => 'branch-offices',
+                'display_name_singular' => 'Sucursal',
+                'display_name_plural' => 'Sucursales',
+                'icon' => 'voyager-home',
+                'model_name' => 'App\\Models\\BranchOffice',
+                'policy_name' => NULL,
+                'controller' => NULL,
+                'description' => NULL,
+                'generate_permissions' => 1,
+                'server_side' => 0,
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
+                'created_at' => '2023-06-24 10:41:59',
+                'updated_at' => '2023-06-24 11:24:33',
+            ),
         ));
         
         

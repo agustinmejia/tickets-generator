@@ -36,5 +36,6 @@ class PermissionsTableSeeder extends Seeder
         Permission::generateFor('teams');
         Permission::generateFor('customers');
         Permission::generateFor('games');
+        Permission::generateFor('branch_offices');
     }
 }

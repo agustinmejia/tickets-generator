@@ -16,7 +16,7 @@ class CreateTicketsTable extends Migration
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->nullable()->constrained('users');
-            $table->foreignId('game_id')->nullable()->constrained('games');
+            $table->foreignId('ticket_print_id')->nullable()->constrained('ticket_prints');
             $table->smallInteger('number')->nullable();
             $table->string('code')->unique();
             $table->string('status')->nullable('disponible');

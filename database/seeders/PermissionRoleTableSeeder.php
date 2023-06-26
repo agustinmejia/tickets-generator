@@ -17,9 +17,7 @@ class PermissionRoleTableSeeder extends Seeder
     {
         // Administrador (desarrollador)
         $role = Role::where('name', 'admin')->firstOrFail();
-
         $permissions = Permission::all();
-
         $role->permissions()->sync(
             $permissions->pluck('id')->all()
         );
@@ -31,6 +29,8 @@ class PermissionRoleTableSeeder extends Seeder
                                                 `key` = 'browse_media' or
                                                 table_name = 'teams' or
                                                 table_name = 'customers' or
+                                                table_name = 'games' or
+                                                table_name = 'branch_offices' or
                                                 table_name = 'users' or
                                                 table_name = 'settings'")->get();
         $role->permissions()->sync($permissions->pluck('id')->all());

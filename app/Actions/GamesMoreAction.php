@@ -25,6 +25,7 @@ class GamesMoreAction extends AbstractAction
     {
         return [
             'class' => 'btn btn-sm btn-default pull-right',
+            'style' => $this->data->status == 'impresión' ? 'display: block' : 'display: none'
         ];
     }
 

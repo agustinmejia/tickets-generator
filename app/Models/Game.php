@@ -18,4 +18,8 @@ class Game extends Model
     public function visitor() {
         return $this->belongsTo(Team::class, 'visitor_id');
     }
+
+    public function prints() {
+        return $this->hasMany(TicketPrint::class, 'game_id');
+    }
 }
